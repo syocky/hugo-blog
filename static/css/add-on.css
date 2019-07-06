@@ -1,0 +1,30 @@
+/*
+  This css file is for individual users to restyle items for their personal site,
+  or for the implementation of features specifically for their site. Anything that
+  is an official part of the theme (ex. Pull Requests) should be included in main.css
+  and follow the formatting and style given.
+*/
+.fa-hatena:before {
+    content: "B!";
+    font-family: Verdana;
+    font-weight: bold
+}
+
+.share-btn.hatena {
+  background: #4BA3D9;
+}
+.share-btn.hatena:hover {
+  background: #4BA3D9;
+}
+.share-btn.pocket {
+  background: #EE4056;
+}
+.share-btn.pocket:hover {
+  background: #EE4056;
+}
+.share-btn.line {
+  background: #00c300;
+}
+.share-btn.line:hover {
+  background: #00c300;
+}
