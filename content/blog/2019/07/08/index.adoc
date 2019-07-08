@@ -1,0 +1,33 @@
+---
+date: 2019-07-08T22:13:21+09:00
+slug: "test_blog"
+title: "テスト"
+featured: "pic03.jpg"
+featuredalt: "Pic 3"
+featuredpath: ""
+linktitle: "リンクタイトル"
+description: "descriptionテスト"
+type: "post"
+categories: []
+tags: []
+archives: ["2019/07"]
+draft: true
+---
+
+= Asciiテスト
+
+== 概要
+
+test +
+テスト！
+
+
+== セクションテスト２
+
+aaaaaaaaaaaaaaa +
+bbbbbbbbbbbbbbbbbbbbbbbbbbb +
+cccccccccccccccccccccccccccccccccccccccc
+
+あああああああああああああああああああああああああ +
+いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい +
+ううううううううううううううううううううううううううううううううううううううううう
