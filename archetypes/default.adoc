@@ -1,14 +1,10 @@
 ---
 author: ""
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+categories: []
+description: ""
+linktitle: ""
 featured: ""
 featuredalt: ""
 featuredpath: ""
-linktitle: ""
-description: ""
-type: "post"
-categories: []
-tags: []
-draft: true
+
 ---
