@@ -185,4 +185,4 @@ hasCJKLanguage          = true
   email                 = "t.syocky@gmail.com"
 
 [permalinks]
-  blog = "/blog/:year/:month/:slug/"
+  blog = "/blog/:year/:month/:day/:slug/"
