@@ -1,0 +1,6 @@
+{{ if .Params.featured }}
+<a href="{{ .RelPermalink }}" class="image featured">
+  <!-- <img src="/img/{{ if eq .Params.featuredpath "date" }}{{ .Page.Date.Format "2006/01" }}/{{ else }}{{ .Params.featuredpath }}{{ end }}{{ .Params.featured }}" alt="{{ .Params.featuredalt }}"> -->
+  <img src="{{ .RelPermalink }}{{ .Params.featured }}" alt="{{ .Params.featuredalt }}">
+</a>
+{{ end }}
