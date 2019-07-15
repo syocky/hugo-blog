@@ -1,10 +1,10 @@
 ---
-author: ""
-categories: []
-description: ""
-linktitle: ""
-featured: ""
-featuredalt: ""
-featuredpath: ""
-
+date: "{{ .Date }}"
+lastmod: "{{ .Date }}"
+slug: ""
+title: ""
+thumbnail = ""
+description = ""
+tags = []
+archives: ["{{ dateFormat "2006/01" .Date }}"]
 ---
