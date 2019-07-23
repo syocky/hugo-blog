@@ -1,14 +1,10 @@
 ---
-author: ""
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-featured: ""
-featuredalt: ""
-featuredpath: ""
-linktitle: ""
+date: "{{ dateFormat "2006-01-02" .Date }}"
+lastmod: "{{ dateFormat "2006-01-02" .Date }}"
+slug: ""
+title: ""
+thumbnail: ""
 description: ""
-type: "post"
-categories: []
 tags: []
-draft: true
+archives: ["{{ dateFormat "2006/01" .Date }}"]
 ---
