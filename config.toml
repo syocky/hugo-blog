@@ -21,7 +21,7 @@ googleAnalytics = "UA-139651310-1"
 [params.author]
   thumbnail = "images/logo.jpg"
   name = "syocky"
-  description = "<p>@Fukuoka</p>"
+  description = "<p>ソフトウェアエンジニア@Fukuoka</p>"
   facebook = "https://www.facebook.com/syocky"
   twitter = "https://twitter.com/syocky"
   github = "https://github.com/syocky"
