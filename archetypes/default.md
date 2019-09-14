@@ -1,14 +1,9 @@
----
-author: ""
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-featured: ""
-featuredalt: ""
-featuredpath: ""
-linktitle: ""
-description: ""
-type: "post"
-categories: []
-tags: []
-draft: true
----
++++
+draft = true
+thumbnail = ""
+tags = []
+categories = []
+date = "{{ .Date }}"
+title = "{{ replace .TranslationBaseName "-" " " | title }}"
+description = ""
++++
