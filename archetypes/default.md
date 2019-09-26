@@ -1,9 +1,10 @@
 +++
-draft = true
+date = "{{ dateFormat "2006-01-02" .Date }}"
+lastmod = "{{ dateFormat "2006-01-02" .Date }}"
+slug = ""
+title = ""
 thumbnail = ""
-tags = []
-categories = []
-date = "{{ .Date }}"
-title = "{{ replace .TranslationBaseName "-" " " | title }}"
 description = ""
+tags = []
+archives = ["{{ dateFormat "2006/01" .Date }}"]
 +++
