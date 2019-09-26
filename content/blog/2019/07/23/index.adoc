@@ -1,7 +1,7 @@
 ---
 date: "2019-07-23"
 lastmod: "2019-07-23"
-slug: "start_tech_blog"
+slug: "start-tech-blog"
 title: "技術ブログ始めます"
 thumbnail: ""
 description: ""

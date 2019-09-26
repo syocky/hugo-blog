@@ -1,7 +1,7 @@
 ---
 date: "2019-08-03"
 lastmod: "2019-08-03"
-slug: "hugo_netlify_quickstart"
+slug: "hugo-netlify-quickstart"
 title: "Hugo + Netlifyクイックスタート"
 thumbnail: "images/eye-catch/hugo-netlify.png"
 description: ""
