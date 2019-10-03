@@ -5,6 +5,8 @@ languageCode = "ja-JP"
 hasCJKLanguage = true
 disqusShortname = "syocky"
 googleAnalytics = "UA-139651310-1"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
 
 [taxonomies]
   tag = "tags"
