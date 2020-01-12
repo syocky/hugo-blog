@@ -5,7 +5,7 @@ slug: "changed-job"
 title: "転職しました"
 thumbnail: ""
 description: ""
-tags: ["雑記"]
+tags: ["雑記","転職","RPA","UiPath"]
 archives: ["2019/12"]
 ---
 
