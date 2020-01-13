@@ -5,7 +5,7 @@ slug: "this-year-resolutions"
 title: "今年の抱負"
 thumbnail: ""
 description: ""
-tags: ["雑記","アジャイル開発"]
+tags: ["雑記","アジャイル","Git","Python","Vim"]
 archives: ["2020/01"]
 ---
 
