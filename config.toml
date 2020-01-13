@@ -19,6 +19,7 @@ pygmentsCodeFences = true
   googlefonts = "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" # Optional, Include google fonts.
   fontfamily = "Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif" # Optional, Override body font family.
   logofontfamily = "Lobster, cursive" # Optional, Override logo font.
+  amazonJpAffiliate = "syocky-22"
 
 [params.author]
   thumbnail = "images/logo.jpg"

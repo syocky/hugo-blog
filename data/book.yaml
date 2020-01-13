@@ -1,0 +1,24 @@
+# {{< amazon category="book" key="SCRUM BOOT CAMP THE BOOK" >}}
+"SCRUM BOOT CAMP THE BOOK":
+  asin: "4798129712"
+  title: "SCRUM BOOT CAMP THE BOOK"
+
+# {{< amazon category="book" key="カイゼン・ジャーニー たった1人からはじめて、「越境」するチームをつくるまで" >}}
+"カイゼン・ジャーニー たった1人からはじめて、「越境」するチームをつくるまで":
+  asin: "4798153346"
+  title: "カイゼン・ジャーニー たった1人からはじめて、「越境」するチームをつくるまで"
+
+# {{< amazon category="book" key="入門 Python 3" >}}
+"入門 Python 3":
+  asin: "4873117380"
+  title: "入門 Python 3"
+
+# {{< amazon category="book" key="Effective Python ―Pythonプログラムを改良する59項目" >}}
+"Effective Python ―Pythonプログラムを改良する59項目":
+  asin: "4873117569"
+  title: "Effective Python ―Pythonプログラムを改良する59項目"
+
+# {{< amazon category="book" key="実践Vim 思考のスピードで編集しよう!" >}}
+"実践Vim 思考のスピードで編集しよう!":
+  asin: "4048916599"
+  title: "実践Vim 思考のスピードで編集しよう!"
