@@ -1,6 +1,6 @@
-/** marginをデフォルトより小さくする */
-article.sn > .article-body p {
-  margin: .5rem 0;
+/** リストのpaddingをデフォルトより小さく調整 */
+article.sn > .article-body li {
+  padding-bottom: 0rem;
   line-height: 1.5rem;
 }
 
