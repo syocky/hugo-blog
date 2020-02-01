@@ -12,6 +12,5 @@ archives: ["{{ dateFormat "2006/01" .Date }}"]
 :toc:
 :toclevels: 1
 :toc-title:
-:sectnums:
 :icons: font
 
