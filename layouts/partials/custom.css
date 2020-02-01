@@ -21,7 +21,7 @@ article.sn > .article-body p {
   list-style-type: none;
 }
 #toc li {
-  padding-top: 0;
+  padding: 0.5em 0.5em 0 1em;
 }
 #toc li > ul {
   padding-left: 1em;
