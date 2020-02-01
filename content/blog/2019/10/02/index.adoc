@@ -1,6 +1,6 @@
 ---
 date: "2019-10-02"
-lastmod: "2019-10-02"
+lastmod: "2020-02-02"
 slug: "hugo-asciidoc-format"
 title: "Hugoの記事をAsciiDocで書く"
 thumbnail: "images/eye-catch/asciidoc.jpg"
@@ -9,6 +9,9 @@ tags: ["Hugo", "AsciiDoc"]
 archives: ["2019/10"]
 ---
 
+:toc:
+:toclevels: 1
+:toc-title:
 :icons: font
 
 == はじめに
@@ -202,9 +205,95 @@ public static void main( String args[] ) {
 ただ、なぜか画面レイアウトが少し変になる事象に遭遇し、CSSが苦手な私は諦めました。。 +
 今のところは、Hugoのシンタックスハイライトで不便を感じてないので使ってますが、AsciiDocシンタックスハイライトが使えるよう改善したら、また記事にしようと思っています。
 
+== 目次をつける
+
+（2020/02/01追記）
+
+`Robust` テーマで記事に目次をつけたい場合は、 フロントマターの `toc` パラメータを `true` にすればOKです。
+
+{{<highlight toml>}}
++++
+toc = true
++++
+{{</highlight>}}
+
+ただし、これはMarkdownで記事を書く場合です。
+
+AsciiDocで記事を書く場合、上記では目次は出ませんでした。
+
+ただ、AsciiDoc自体に目次機能があるので、私はそれを有効にして、スタイル調整しています。
+
+AsciiDocで目次を出す場合は、フロントマターの下に、 `:toc:` を追加すればOKです。 +
+また、目次をカスタマイズする属性もあります。
+
+例えば、下記のような感じ
+
+{{<highlight adoc>}}
+:toc:               // 目次を表示
+:toclevels: 2       // 階層数を指定可能
+:toc-title: 目次    // 目次タイトル 
+:sectnums:          // 番号を振る
+{{</highlight>}}
+
+=== サンプル
+
+私の場合は、今のところ、このような目次をつけています。
+
+image::TableOfContents.png[]
+
+具体的には、AsciiDoc形式記事、CSSを追加する必要があります。
+
+==== AsciiDocの記事
+
+フロントマターの下に下記を追加します。 +
+階層数は1で、目次タイトルはなし（CSSで設定）
+
+{{<highlight adoc>}}
+:toc:
+:toclevels: 1
+:toc-title:
+{{</highlight>}}
+
+
+==== CSS
+
+`Robust` テーマの場合、CSSをカスタマイズする場合は、
+`/layouts/partials/custom.css` にファイルを配置してカスタマイズします。
+
+{{<highlight css>}}
+#toc > ul {
+  font-size: smaller;
+  border-radius: 0.5em;
+  border: solid 1px lightgray;
+  padding: 0.5em 1em;
+  line-height: 2;
+}
+#toc > ul:before {
+  content: "目次";
+  font-weight: bolder;
+}
+#toc ul {
+  list-style-type: none;
+}
+#toc li {
+  padding: 0.5em 0.5em 0 1em;
+}
+#toc li > ul {
+  padding-left: 1em;
+  width: 100%;
+}
+#toc a {
+  font-weight: normal;
+  display: block;
+  border-bottom: dashed 1px lightgray;
+}
+{{</highlight>}}
+
 == リファレンス
 
 * https://takumon.github.io/asciidoc-syntax-quick-reference-japanese-translation/[Asciidoctor 文法クイックリファレンス(日本語訳)^] 
 * https://asciidoctor.org/docs/user-manual/[Asciidoctor User Manual^]
 * http://diary.wshito.com/comp/cms/hugo-asciidoc/[Hugo で AsciiDoc 原稿を書く際の留意点^]
 * https://maku77.github.io/hugo/shortcode/highlight.html[ソースコードをハイライト表示する (highlight)^]
+* https://maku77.github.io/hugo/template/table-of-contents.html[各ページに目次を表示する (.TableOfContents) | まくまくHugo/Goノート^]
+* http://ytyaru.hatenablog.com/entry/2018/02/07/000000[AsciiDocで目次を自動作成する(ToC) - やってみる^]
