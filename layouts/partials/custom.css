@@ -4,6 +4,35 @@ article.sn > .article-body p {
   line-height: 1.5rem;
 }
 
+/** Asciidocの目次スタイル */
+#toc > ul {
+  font-size: smaller;
+  border-radius: 0.5em;
+  border: solid 1px lightgray;
+  padding: 0.5em 1em;
+  line-height: 2;
+  /* display: inline-block; */
+}
+#toc > ul:before {
+  content: "目次";
+  font-weight: bolder;
+}
+#toc ul {
+  list-style-type: none;
+}
+#toc li {
+  padding-top: 0;
+}
+#toc li > ul {
+  padding-left: 1em;
+  width: 100%;
+}
+#toc a {
+  font-weight: normal;
+  display: block;
+  border-bottom: dashed 1px lightgray;
+}
+
 /* AsciiDoctor*/
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
