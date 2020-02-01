@@ -1,3 +1,9 @@
+/** marginをデフォルトより小さくする */
+article.sn > .article-body p {
+  margin: .5rem 0;
+  line-height: 1.5rem;
+}
+
 /* AsciiDoctor*/
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
