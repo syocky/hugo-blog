@@ -30,12 +30,21 @@ td.lntd > pre.chroma > code {
 .chroma .hl { background-color: #44475A }
 
 /** コードブロックのタイトル */
+article.sn > .article-body figure.xCodeBlock {
+  margin: .5rem 0;
+}
 figure.xCodeBlock > figcaption.xCodeBlock_title {
   display: inline-block;
   border-radius: 0.5em 0.5em 0 0;
   padding: 0.3em 1em;
   background-color: #777;
   color: #eee;
+}
+figure.xCodeBlock > .xCodeBlock_code {
+  margin-top: -9px;
+}
+figure.xCodeBlock > .xCodeBlock_code .lntable {
+  margin-top: 9px;
 }
 
 /** Asciidocの目次スタイル */
