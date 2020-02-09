@@ -30,5 +30,11 @@
 			"$4",
 			"{{</code>}}"
 		]
+	},
+	"Hugo BlogCard": {
+		"prefix": "hugocard",
+		"body": [
+			"{{<blogcard url=\"$1\">}}"
+		]
 	}
 }
