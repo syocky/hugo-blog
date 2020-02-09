@@ -4,6 +4,40 @@ article.sn > .article-body li {
   line-height: 1.5rem;
 }
 
+/** コードブロックのスタイル調整 */
+article.sn > .article-body code,
+article.sn > .article-body pre {
+  background-color: #282a36;
+  font-size: .8rem;
+}
+article.sn > .article-body pre {
+  margin: 1.5rem 0rem;
+}
+article.sn > .article-body pre.chroma {
+  margin: .5rem 0rem;
+}
+@media (max-width: 768px) {
+  article.sn > .article-body pre {
+    margin: 1.5rem 0rem;
+  }
+}
+article.sn > .article-body pre > code {
+  padding: 1rem 1rem;
+}
+td.lntd > pre.chroma > code {
+  padding: .5rem .3rem;
+}
+.chroma .hl { background-color: #44475A }
+
+/** コードブロックのタイトル */
+figure.xCodeBlock > figcaption.xCodeBlock_title {
+  display: inline-block;
+  border-radius: 0.5em 0.5em 0 0;
+  padding: 0.3em 1em;
+  background-color: #777;
+  color: #eee;
+}
+
 /** Asciidocの目次スタイル */
 #toc > ul {
   font-size: smaller;
@@ -34,18 +68,25 @@ article.sn > .article-body li {
 }
 
 /* AsciiDoctor*/
+table{border-collapse:collapse;border-spacing:0}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.admonitionblock>table td.content>code{background-color: #eceff1;}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
 .admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
 .admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
 .admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
 .admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
 .admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(100,100,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 
-/* LineHighlight */
-.chroma .hl { display: block; width: 100%;background-color: #44475A }
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
