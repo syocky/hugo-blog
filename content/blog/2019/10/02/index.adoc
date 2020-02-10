@@ -1,6 +1,6 @@
 ---
 date: "2019-10-02"
-lastmod: "2020-02-02"
+lastmod: "2020-02-10"
 slug: "hugo-asciidoc-format"
 title: "Hugoの記事をAsciiDocで書く"
 thumbnail: "images/eye-catch/asciidoc.jpg"
@@ -205,9 +205,70 @@ public static void main( String args[] ) {
 ただ、なぜか画面レイアウトが少し変になる事象に遭遇し、CSSが苦手な私は諦めました。。 +
 今のところは、Hugoのシンタックスハイライトで不便を感じてないので使ってますが、AsciiDocシンタックスハイライトが使えるよう改善したら、また記事にしようと思っています。
 
-== 目次をつける
+=== キャプション付きでシンタックスハイライト
 
-（2020/02/01追記）
+このようにキャプション付きでコードを書きたいことがあります。
+
+{{<code lang="java" title="サンプルコード" attr="linenos=table">}}
+public class Main {
+    public static void main(String... args) {
+        System.out.println("Hello");
+    }
+}
+{{</code>}}
+
+残念ながら標準の `highlight` ショートコードには、キャプション付きで表示する属性はありません。
+
+HTML的には、 `figure` 、 `figcaption` タグを利用すればキャプションが付けられるので、
+このタグと `highlight` ショートコードを組み合わせたショートコードを自作すればよさそうです。
+
+自作ショートコードは下記のように新規で作成します。
+
+{{<code lang="go-html-template" title="layouts/shortcodes/code.html" attr="linenos=table">}}
+{{- $title := .Get "title" -}}
+{{- $lang := or (.Get "lang") "" -}}
+{{- $attr := or (.Get "attr") "" -}}
+<figure class="xCodeBlock">
+    {{ with $title }}
+    <figcaption class="xCodeBlock_title">{{.}}</figcaption>
+    {{ end }}
+    <div class="xCodeBlock_code">
+        {{ highlight (trim .Inner "\r\n") $lang $attr }}
+    </div>
+</figure>
+{{</code>}}
+
+あとは、CSSでスタイルを調整します。
+
+{{<code lang="css" title="layouts/partials/custom.css" attr="">}}
+figure.xCodeBlock > figcaption.xCodeBlock_title {
+  display: inline-block;
+  border-radius: 0.5em 0.5em 0 0;
+  padding: 0.3em 1em;
+  background-color: #777;
+  color: #eee;
+}
+figure.xCodeBlock > .xCodeBlock_code {
+  margin-top: -9px;
+}
+figure.xCodeBlock > .xCodeBlock_code .lntable {
+  margin-top: 9px;
+}
+{{</code>}}
+
+[NOTE]
+====
+`highlight` ショートコードに行番号を付けるオプションがありますが、これをON／OFFによって、キャプションがずれるので、それぞれでマージンを調整しています。
+
+CSSが得意ではないので、他に良い方法が思いつきませんでした。。
+====
+
+こちらの記事を参考にさせていただきました。
+
+{{<blogcard url="https://maku77.github.io/hugo/shortcode/highlight.html">}}
+
+
+== 目次をつける
 
 `Robust` テーマで記事に目次をつけたい場合は、 フロントマターの `toc` パラメータを `true` にすればOKです。
 
