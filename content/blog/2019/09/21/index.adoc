@@ -1,6 +1,6 @@
 ---
 date: "2019-09-21"
-lastmod: "2019-09-21"
+lastmod: "2020-02-10"
 slug: "customize-hugo-robust"
 title: "Hugoテーマ「Robust」をカスタマイズする"
 thumbnail: "images/eye-catch/robust.jpg"
@@ -245,6 +245,52 @@ NOTE: `meta.html` がない場合は、 `themes/hugo_theme_robust/layouts/partia
 {{<highlight go-html-template>}}
 <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}favicon.ico">
 {{</highlight>}}
+
+=== はてなブログカード
+
+ブログカードは、リンク先のサムネイル、タイトル、概要などをカード形式で表示されるものです。
+
+{{<blogcard url="https://github.com/syocky/">}}
+
+こういうやつ。 +
+普通のリンクより見やすくて、かっちょいい感じですね。
+
+ただ、Hugo標準にある機能ではないのですが、
+はてなが提供している「ブログカード拡張機能」を利用すれば、簡単にできます。
+
+はてなの記事だけでなく、任意のサイトにも対応しています。 +
+ありがたい！
+
+はてなでは、以下のように書くとブログカードを作成してくれるようです。
+
+____
+++
+https://hatenablog-parts.com/embed?url=[任意のURL]
+++
+____
+
+これを、 `iframe` で使えば、簡単にブログカードを差し込めます。
+
+Hugoでは、ショートコードを作って、簡単に使えるようにします。
+
+下記のようにショートコードを作成します。
+
+{{<code lang="go-html-template" title="layouts/shortcodes/blogcard.html" attr="">}}
+<iframe class="hatenablogcard" style="width:100%;height:155px;" src="https://hatenablog-parts.com/embed?url={{ .Get "url" }}" width="300" height="150" frameborder="0" scrolling="no"></iframe>
+{{</code>}}
+
+Hugo記事内では、下記のように書けば、ブログカードが表示されます。
+
+{{<code lang="go-html-template" title="" attr="">}}
+{{</* blogcard url="https://github.com/syocky/" */>}}
+{{</code>}}
+
+==== リファレンス
+
+* https://yuzuafro.github.io/yuzuafrolog/posts/20180430_hugo3/#%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0%E3%82%AB%E3%83%BC%E3%83%89%E7%9A%84%E3%81%AA%E6%A9%9F%E8%83%BD%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B[Hugoでブログを作る 3 · ゆずあふろのブログ^]
+
+* https://nelog.jp/hatenablogcard[はてなブログカードのような美しい外部リンクをクリック一発で作成する方法^]
+
 
 == まとめ
 
