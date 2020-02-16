@@ -1,3 +1,27 @@
+/** fontawesomeカスタマイズ */
+.fa-facebook {
+  color: #3B5998;
+}
+.fa-twitter {
+  color: #55acee;
+}
+.fa-github {
+  color: #171515;
+}
+.fa-get-pocket {
+  color: #DC3D50;
+}
+.fa-line {
+  color: #1dcd00;
+}
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+  color: #008fde;
+}
+
+/** 見出し */
 h1, h2, h3, h4, h5 ,h6 {
   margin: 1.5rem 0rem;
 }
