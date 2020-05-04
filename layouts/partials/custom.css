@@ -33,6 +33,9 @@ article.sn > .article-body li {
 }
 
 /** コードブロックのスタイル調整 */
+.literalblock > .content pre {
+  padding: 1rem;
+}
 article.sn > .article-body code,
 article.sn > .article-body pre {
   background-color: #282a36;
